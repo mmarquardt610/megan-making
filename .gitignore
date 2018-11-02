@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# -- Added after default project install
+.env
