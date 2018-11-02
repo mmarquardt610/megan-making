@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # -- Added after default project install
 # Use dotenv to load in .env for environment variables
 gem 'dotenv-rails'
+gem 'redcarpet'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

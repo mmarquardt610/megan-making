@@ -1,17 +1,15 @@
-<h1>
-  Megan Making
-</h1>
+<%= render 'partials/header' %>
 
-<% if @latest_post.blank? %>
-  <h2>
-    No posts yet!
-  </h2>
-<% else %>
-  <h2>
-    <%= @latest_post.title %>
-  <h2>
+<div class="PostContainer">
+  <% if @latest_post.blank? %>
+    <h2>
+      No posts yet!
+    </h2>
+  <% else %>
+    <h2>
+      <%= @latest_post.title %>
+    </h2>
 
-  <p>
-    <%= @latest_post.content %>
-  </p>
-<% end %>
+    <%= markdown_render(@latest_post.content) %>
+  <% end %>
+</div>
