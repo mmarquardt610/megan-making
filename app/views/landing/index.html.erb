@@ -1,0 +1,17 @@
+<h1>
+  Megan Making
+</h1>
+
+<% if @latest_post.blank? %>
+  <h2>
+    No posts yet!
+  </h2>
+<% else %>
+  <h2>
+    <%= @latest_post.title %>
+  <h2>
+
+  <p>
+    <%= @latest_post.content %>
+  </p>
+<% end %>
