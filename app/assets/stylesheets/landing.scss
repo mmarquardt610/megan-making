@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+
 .PostContainer {
-  margin: 16px 32px;
+  margin: 8px 0;
+
+
+  @include for-tablet-portrait-up {
+    margin: 16px 32px;
+  }
 }
