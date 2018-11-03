@@ -9,6 +9,9 @@
     <h2>
       <%= @latest_post.title %>
     </h2>
+    <div class='detail'>
+      Added <%= @latest_post.created_at.strftime('%D') %>
+    </div>
 
     <%= markdown_render(@latest_post.content) %>
   <% end %>
