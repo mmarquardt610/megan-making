@@ -12,7 +12,7 @@ class CreateFirstPost < ActiveRecord::Migration
           "been spending most of my engineering hours mending the [Bloc app](https://www.bloc.io) "\
           "and now it's time to built some new things from scratch. Expect to see web apps, mobile apps, "\
           "crafts, recipes, decorations, etc.",
-          "I'm going to blog about my time off here at [meganmarie.io](https://www.meganmarie.io). This blog is built "\
+          "I'm going to blog about my time off here at [meganmarie.io](http://www.meganmarie.io). This blog is built "\
           "with a quick Ruby (2.4.0) on Rails (5.0.2) implementation. More to come."].join("\n\n")
         )
       end
