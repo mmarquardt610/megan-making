@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* Taken from https://gist.github.com/davidgilbertson/ad24b42b0eddde2dc6b1b51f9460af11#file-css-breakpoint-mixins-scss */
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+
+body {
+  margin: 0 24px;
+
+  @include for-tablet-portrait-up {
+    margin: 0 48px;
+  }
+}
+
+h1 {
+  color: darkblue;
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+  font-size: 48px;
+  margin: 32px 0 16px 0;
+
+  @include for-tablet-portrait-up {
+    font-size: 60px;
+    margin: 40px 0 32px 0;
+  }
+}
+
+h2 {
+  color: darkblue;
+  font-size: 24px;
+  font-family: 'Inconsolata', monospace;
+
+  @include for-tablet-portrait-up {
+    font-size: 36px;
+  }
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+}
+
+.NavigationBar {
+  display: flex;
+  justify-content: center;
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+
+  a {
+    color: lightblue;
+    text-decoration: none;
+    padding: 8px 12px;
+
+    &:hover {
+      color: darkblue;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    font-size: 24px;
+    a {
+      padding: 16px 24px;
+    }
+  }
+}
