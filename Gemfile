@@ -32,9 +32,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # -- Added after default project install
-# Use dotenv to load in .env for environment variables
+# Doteve to load in .env for environment variables
 gem 'dotenv-rails'
+# Redcarpet for parsing markdown of posts
 gem 'redcarpet'
+# Devise for user authentication
+gem 'devise'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
