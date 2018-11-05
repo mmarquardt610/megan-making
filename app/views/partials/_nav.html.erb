@@ -1,5 +1,10 @@
 <div class='NavigationBar'>
-  <%= link_to 'Instagram', 'https://www.instagram.com/nuttmeg610' %>
-  <%= link_to 'Twitter', 'https://twitter.com/meganmarie610' %>
-  <%= link_to 'LinkedIn', 'https://www.linkedin.com/in/megan-marquardt' %>
+  <% if user_signed_in? %>
+    <%= link_to 'New', '' %>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to 'Instagram', 'https://www.instagram.com/nuttmeg610', target: '_' %>
+    <%= link_to 'Twitter', 'https://twitter.com/meganmarie610', target: '_' %>
+    <%= link_to 'LinkedIn', 'https://www.linkedin.com/in/megan-marquardt', target: '_' %>
+  <% end %>
 </div>
