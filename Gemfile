@@ -38,6 +38,8 @@ gem 'dotenv-rails'
 gem 'redcarpet'
 # Devise for user authentication
 gem 'devise'
+# Font awesome for icons
+gem 'font-awesome-rails'
 
 
 group :development, :test do

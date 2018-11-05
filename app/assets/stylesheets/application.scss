@@ -14,6 +14,8 @@
  *= require_self
  */
 
+@import "font-awesome";
+
 /* Taken from https://gist.github.com/davidgilbertson/ad24b42b0eddde2dc6b1b51f9460af11#file-css-breakpoint-mixins-scss */
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
