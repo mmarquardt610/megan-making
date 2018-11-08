@@ -152,32 +152,36 @@ form {
   }
 }
 
-.field {
+.p-style {
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  color: gray;
+}
+
+.h2-style {
+  font-size: 36px;
+  font-family: 'Roboto Slab', serif;
+  color: darkblue;
+
+}
+
+.simple-field {
   border: 0;
   border-left: 2px solid darkblue;
   padding: 0 8px;
   margin: 0 0 24px 0;
 
-  &.title {
-    font-size: 36px;
-    font-family: 'Roboto Slab', serif;
-    color: darkblue;
-  }
-
-  &.content {
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
-    color: gray;
+  &.big-text-box {
     height: 480px;
   }
 }
+
 .field_with_errors {
-  .field {
+  .simple-field {
     border-left: 2px solid red;
     width: 100%;
   }
 }
-
 
 .button {
   background-color: darkblue;
@@ -188,6 +192,7 @@ form {
   border: none;
   border-radius: 16px;
   padding: 8px 24px;
+  margin: 32px 0;
   &:hover {
     cursor: pointer;
     background-color: lightblue;
