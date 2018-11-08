@@ -1,0 +1,5 @@
+<%= form_for @post do |f| %>
+  <%= f.text_field :title , placeholder: 'Title', class: %w(simple-field h2-style) %>
+  <%= f.text_area :content, placeholder: 'Content', class: %w(simple-field p-style big-text-box) %>
+  <%= f.submit class: 'button' %>
+<% end %>
