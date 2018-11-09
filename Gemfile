@@ -42,6 +42,8 @@ gem 'devise'
 gem 'font-awesome-rails'
 # Ahoy for event tracking
 gem 'ahoy_matey'
+# Trello API for automated weekly release notes
+gem 'ruby-trello'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
