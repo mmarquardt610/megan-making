@@ -11,41 +11,44 @@
 </head>
 <body>
 
-<div class='FlashBar'>
-  <p class="notice"><i><%= notice %></i></p>
-  <p class="alert"><i><%= alert %></i></p>
-</div>
+<div class='PageContainer'>
 
-<div class='TopHeader'>
-  <h1 class='TitleCard'>
-    <%= link_to 'Megan Marie', root_path %>
-  </h1>
-  <div class='NavigationBar'>
-    <% if user_signed_in? %>
-      <a href=<%= new_post_path %>>
-        <span class='fa fa-align-left'/>
-      </a>
-      <a href=<%= new_post_path %>>
-        <span class='fa fa-list-ul'/>
-      </a>
-      <a href=<%= destroy_user_session_path%> data-method="delete">
-        <span class='fa fa-sign-out'/>
-      </a>
-    <% else %>
-      <a href='https://www.instagram.com/nuttmeg610' target='_'>
-        <span class='fa fa-instagram'/>
-      </a>
-      <a href='https://twitter.com/meganmarie610' target='_'>
-        <span class='fa fa-twitter'/>
-      </a>
-      <a href='https://www.linkedin.com/in/megan-marquardt' target='_'>
-        <span class='fa fa-linkedin'/>
-      </a>
-    <% end %>
+  <div class='FlashBar'>
+    <p class="notice"><i><%= notice %></i></p>
+    <p class="alert"><i><%= alert %></i></p>
   </div>
-</div>
 
-<%= yield %>
+  <div class='TopHeader'>
+    <h1 class='TitleCard'>
+      <%= link_to 'Megan Marie', root_path %>
+    </h1>
+    <div class='NavigationBar'>
+      <% if user_signed_in? %>
+        <a href=<%= new_post_path %>>
+          <span class='fa fa-align-left'/>
+        </a>
+        <a href=<%= new_post_path %>>
+          <span class='fa fa-list-ul'/>
+        </a>
+        <a href=<%= destroy_user_session_path%> data-method="delete">
+          <span class='fa fa-sign-out'/>
+        </a>
+      <% else %>
+        <a href='https://www.instagram.com/nuttmeg610' target='_'>
+          <span class='fa fa-instagram'/>
+        </a>
+        <a href='https://twitter.com/meganmarie610' target='_'>
+          <span class='fa fa-twitter'/>
+        </a>
+        <a href='https://www.linkedin.com/in/megan-marquardt' target='_'>
+          <span class='fa fa-linkedin'/>
+        </a>
+      <% end %>
+    </div>
+  </div>
+  
+  <%= yield %>
+</div>
 
 </body>
 </html>
