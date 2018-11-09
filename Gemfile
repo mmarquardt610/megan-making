@@ -40,7 +40,8 @@ gem 'redcarpet'
 gem 'devise'
 # Font awesome for icons
 gem 'font-awesome-rails'
-
+# Ahoy for event tracking
+gem 'ahoy_matey'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
