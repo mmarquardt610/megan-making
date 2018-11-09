@@ -1,0 +1,15 @@
+<div class='PostNavigator'>
+  <div>
+    <% if post.previous.present? %>
+      <%= link_to "Read Previous: #{post.previous.title}", post_path(post.previous), class: 'hug-left' %>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to 'All Posts', posts_path, class: 'hug-center' %>
+  </div>
+  <div>
+    <% if post.next.present? %>
+      <%= link_to "Read Next: #{post.next.title}", post_path(post.next), class: 'hug-right' %>
+    <% end %>
+  </div>
+</div>

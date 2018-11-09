@@ -1,13 +1,15 @@
-<h2>
-  <%= link_to post.title, post_path(post) %>
-</h2>
-<div class='detail'>
-  Added <%= post.created_at.strftime('%b %e, %Y') %>
-  <% if user_signed_in? %>
-    | 
-    <%= link_to 'Edit', edit_post_path(post) %>
-    |
-    <%= link_to 'Delete', post_path(post), method: :delete %>
-  <% end %>
+<div class='Post'>
+  <h2>
+    <%= link_to post.title, post_path(post) %>
+  </h2>
+  <div class='detail'>
+    Added <%= post.created_at.strftime('%b %e, %Y') %>
+    <% if user_signed_in? %>
+      | 
+      <%= link_to 'Edit', edit_post_path(post) %>
+      |
+      <%= link_to 'Delete', post_path(post), method: :delete %>
+    <% end %>
+  </div>
+  <%= markdown_render(post.content) %>
 </div>
-<%= markdown_render(post.content) %>
