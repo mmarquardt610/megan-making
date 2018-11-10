@@ -11,5 +11,7 @@
       <%= link_to 'Delete', post_path(post), method: :delete %>
     <% end %>
   </div>
-  <%= markdown_render(post.content) %>
+  <div class='PostContent'>
+    <%= markdown_render(post.content) %>
+  </div>
 </div>
