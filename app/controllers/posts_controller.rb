@@ -20,6 +20,18 @@ class PostsController < ApplicationController
     end
   end
 
+  def new_release_notes
+    cards_by_label = completed_cards.group_by { |c| c.labels.first.name }
+    content = cards_by_label.map do |label, cards|
+      "### #{label}\n\n" + cards.map { |c| "* #{c.name}" }.join("\n")
+    end.join("\n\n")
+
+    title = "Weekly Release Notes - #{Date.today.strftime('%b %e, %Y')}"
+    @post = Post.new(content: content, title: title)
+
+    render 'new'
+  end
+
   def show
   end
 
@@ -47,5 +59,15 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :content)
+  end
+
+  def completed_cards
+    @completed_cards ||=
+      Trello::Board.find(ENV['TRELLO_BOARD'])
+        .lists
+        .find { |l| l.name == 'Done' }
+        .cards
+        .select { |c| c.closed == false && c.labels.first.name != 'Money maker' }
+        .reverse
   end
 end
