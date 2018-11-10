@@ -1,3 +1,20 @@
 // Place all the styles related to the landing controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.LatestPostHeader {
+  display: flex;
+
+  .midline {
+    flex-grow: 1;
+    align-self: flex-start;
+    border-bottom: 1px solid darkblue;
+    padding-top: 12px;
+    margin: 0 8px;
+  }
+  .subheader {
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    color: darkblue;
+  }
+}

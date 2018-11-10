@@ -4,7 +4,15 @@
       No posts yet!
     </h2>
   <% else %>
+    <div class='LatestPostHeader'> 
+      <div class='midline'></div>
+      <div class='subheader'>
+        LATEST POST
+      </div>
+      <div class='midline'></div>
+    </div>
     <%= render 'posts/post', post: @latest_post %>
+    <%= render 'posts/post_navigator', post: @latest_post %>
   <% end %>
 </div>
 
