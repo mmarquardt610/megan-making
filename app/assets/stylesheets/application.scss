@@ -153,6 +153,11 @@ form {
       text-decoration: underline;
     }
   }
+
+  img {
+    max-height: 360px;
+    box-shadow: 0 0 32px grey;
+  }
 }
 
 .detail {
