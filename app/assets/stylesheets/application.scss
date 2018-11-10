@@ -143,6 +143,7 @@ form {
 
 .PostContent {
   font-size: 16px;
+  line-height: 120%;
 
   @include for-tablet-portrait-up {
     font-size: 24px;
