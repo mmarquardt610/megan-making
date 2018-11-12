@@ -3,6 +3,7 @@
 <head>
   <title>Megan Marie</title>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <%= auto_discovery_link_tag :rss, posts_url(format: :rss), title: 'Megan Marie' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -34,6 +35,7 @@
           <span class='fa fa-sign-out'/>
         </a>
       <% else %>
+        <%= link_to 'Posts', posts_url %>
         <a href='https://www.instagram.com/nuttmeg610' target='_'>
           <span class='fa fa-instagram'/>
         </a>
@@ -48,6 +50,20 @@
   </div>
   
   <%= yield %>
+
+  <div class='Footer'>
+    <center>
+      Built by Megan Marie
+      &nbsp;&nbsp;
+      <a href='mailto:hello@meganmarie.io'>
+        <span class='fa fa-envelope'/>
+      </a>
+      &nbsp;&nbsp;
+      <a href=<%=posts_url(format: :rss)%>>
+        <span class='fa fa-rss'/>
+      </a>
+    </center>
+  </div>
 </div>
 
 </body>
