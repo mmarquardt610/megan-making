@@ -3,7 +3,7 @@
     <%= link_to post.title, post_path(post) %>
   </h2>
   <div class='detail'>
-    Added <%= post.created_at.strftime('%b %e, %Y') %>
+    Added <%= post.created_at.in_time_zone('America/Los_Angeles').strftime('%b %e, %Y') %>
     <% if user_signed_in? %>
       | 
       <%= link_to 'Edit', edit_post_path(post) %>
